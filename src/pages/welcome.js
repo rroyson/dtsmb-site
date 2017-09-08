@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Footer from '../containers/footer'
 
 const Welcome = function() {
   return (
@@ -9,13 +10,22 @@ const Welcome = function() {
         <div>
 
           <div
-            className="vh-100 w-100 tc bg-dark-gray white cover flex flex-column"
+            className="vh-100 w-100 flex-column overflow-scroll bg-dark-gray white cover"
             style={{
               backgroundImage:
                 'url("https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/10644981_1529062614008312_4558642661077359055_n.jpg?oh=8ff6acd9e247ae2bc7dfcf6e0fcf4e8f&oe=5A574D53")'
             }}
           >
-            <div className="flex fr w-100 vh-25 dib">
+          <header className='tr pa4'>
+          <a
+            className=" hover-white-70 no-underline white f4 fw3 pv2 ph3 ba"
+            href="/home"
+          >
+            Enter
+          </a>
+          </header>
+
+          { /* <div className="flex fr w-100 vh-25 dib">
               <nav className="dt w-100 mw8 ">
                 <div className="dtc w2 v-mid pa3">
                   <a
@@ -65,33 +75,31 @@ const Welcome = function() {
                   </a>
                 </div>
               </nav>
-            </div>
+            </div>*/}
 
             <div
               style={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                height: '30%'
+                height: '25%'
               }}
             >
-              <h1 className="ma0 f1 fw1 i white-70 ">
+              <h1 className="ma0 f1 fw1 i white ">
                 The Charleston Wedding Band
               </h1>
             </div>
-            <div className="flex-column vh-50">
-              <a
-                className="f5 fw3 hover-white no-underline white-80 dib pv2 ph3 ba"
-                href="/home"
-              >
-                Enter
-              </a>
-            </div>
+            <div className='flex justify-center pb4'>
+            <iframe className="vh-50 w-60 ba white-50" 
+  src="https://www.youtube.com/embed/Ci3i-XwBwAs">
+  </iframe>
+  </div>
+  <Footer />
+
           </div>
         </div>
-
       </main>
-
+      
     </div>
   )
 }

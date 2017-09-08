@@ -16,11 +16,11 @@ const Home = function() {
                 'url("https://static.wixstatic.com/media/f2a084_0bef4e0fafa8409b8dc7528fef0ff5ac.jpg/v1/fill/w_385,h_480,al_c,q_80,usm_0.66_1.00_0.01/f2a084_0bef4e0fafa8409b8dc7528fef0ff5ac.webp")'
             }}
           >
-            <div className="o-70">
+            <div>
               <Header />
 
             </div>
-            <div className="center flex-column mt6 w-75 tc bg-white-80 black avenir">
+            <div className="center flex-column mt4 w-100 tc bg-white-80 black avenir">
               <article>
                 <h1 className="pa2">
                   {' '}hello paragraph{' '}
