@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../containers/header'
+import HomeFooter from '../containers/home-footer'
 
 const Home = function() {
   return (
@@ -10,7 +11,7 @@ const Home = function() {
         <div>
 
           <div
-            className="vh-100 w-100 bg-dark-gray white cover flex flex-column"
+            className="vh-100 w-100 flex-column overflow-scroll bg-dark-gray white cover flex flex-column"
             style={{
               backgroundImage:
                 'url("https://static.wixstatic.com/media/f2a084_0bef4e0fafa8409b8dc7528fef0ff5ac.jpg/v1/fill/w_385,h_480,al_c,q_80,usm_0.66_1.00_0.01/f2a084_0bef4e0fafa8409b8dc7528fef0ff5ac.webp")'
@@ -44,6 +45,9 @@ const Home = function() {
                 </p>
               </article>
             </div>
+          </div>
+          <div className="flex justify-center h-4">
+            <HomeFooter />
           </div>
         </div>
       </main>
