@@ -5,10 +5,15 @@ var googleFonts = require('google-fonts')
 
 const Header = function(props) {
   return (
-    <div className="pa2 bg-black-80 white pb1 athelas">
+    <div className="pa3 bg-black-80 white athelas">
       <header>
 
-        <h3 className="tl dim dib-ns avenir pa2">{props.app.title}</h3>
+        <a
+          className="tl dim f3 fw1 dib-ns avenir white pa2 no-underline"
+          href="/"
+        >
+          {props.app.title}
+        </a>
         <div
           className="pr2 flex"
           style={{
@@ -16,24 +21,24 @@ const Header = function(props) {
           }}
         >
           <a
-            className="f5 fw4 dim flex  no-underline white  pv2 ph3"
-            href="/"
+            className="f5 fw1 dim flex  no-underline white  pv2 ph3"
+            href="/about"
           >
             The Band
           </a>
           <a
-            className="f5 fw4 dim flex no-underline white  pv2 ph3"
-            href="/"
+            className="f5 fw1 dim flex no-underline white  pv2 ph3"
+            href="/bookings"
           >
             Bookings
           </a>
           <a
-            className="f5 fw4 dim flex no-underline white pv2 ph3"
-            href="/"
+            className="f5 fw1 dim flex no-underline white pv2 ph3"
+            href="/contact"
           >
             Contact
           </a>
-      
+
         </div>
       </header>
     </div>
