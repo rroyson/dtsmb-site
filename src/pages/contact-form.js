@@ -140,7 +140,7 @@ function mapActionsToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state.form.date)
+  console.log('state', state.form)
   return {
     form: state.form
   }
