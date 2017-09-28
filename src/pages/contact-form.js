@@ -17,6 +17,7 @@ import {
   SET_FORM_DATE_CHANGE,
   SET_FORM_DATE_SELECT
 } from '../constants'
+import { createEmail } from '../db'
 
 class Form extends React.Component {
   render() {
@@ -51,7 +52,10 @@ class Form extends React.Component {
                   <h1> Contact Us </h1>
                 </div>
                 <div className="center flex-column pt4 w-75 tc bg-white-80 o-60 black avenir">
-                  <form className="tl ph2">
+                  <form
+                    className="tl ph2"
+                    onSubmit={props.submitEmail(props.history)}
+                  >
                     <TextField
                       name="Full Name"
                       value={props.form.name}
@@ -123,6 +127,10 @@ const connector = connect(mapStateToProps, mapActionsToProps)
 
 function mapActionsToProps(dispatch) {
   return {
+    submitEmail: history => e => {
+      e.preventDefault()
+      dispatch(createEmail(history))
+    },
     handleName: e => dispatch({ type: SET_FORM_NAME, payload: e.target.value }),
     handleAddress: e =>
       dispatch({ type: SET_FORM_ADDRESS, payload: e.target.value }),
@@ -140,7 +148,7 @@ function mapActionsToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state.form)
+  console.log('state', state.form.date._d)
   return {
     form: state.form
   }
