@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "google-fonts": "^1.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "moment": "^2.18.1",
     "nodemailer": "^4.1.0",
     "ramda": "^0.24.1",

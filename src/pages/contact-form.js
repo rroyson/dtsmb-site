@@ -128,6 +128,7 @@ const connector = connect(mapStateToProps, mapActionsToProps)
 function mapActionsToProps(dispatch) {
   return {
     submitEmail: history => e => {
+      // console.log('history', history)
       e.preventDefault()
       dispatch(createEmail(history))
     },

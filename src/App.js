@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import history from './history'
 import Welcome from './pages/welcome'
 import Home from './pages/home'
 import About from './pages/about'
@@ -8,14 +9,15 @@ import Form from './pages/contact-form'
 
 const App = function(props) {
   return (
-    <BrowserRouter>
+    <BrowserRouter history={history}>
       <div>
-        <Route exact path="/" component={Welcome} />
-        <Route path="/home" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/bookings" component={Bookings} />
-        <Route path="/contact" component={Form} />
-
+        <Switch>
+          <Route exact path="/" component={Welcome} />
+          <Route path="/home" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/bookings" component={Bookings} />
+          <Route path="/contact" component={Form} />
+        </Switch>
       </div>
     </BrowserRouter>
   )
