@@ -9,7 +9,7 @@ const Header = function(props) {
       <header>
 
         <a
-          className="tl dim f3 fw1 dib-ns avenir white pa2 no-underline"
+          className="tl dim f3 fw5 dib-ns baskerville i white pa2 no-underline"
           href="/"
         >
           {props.app.title}

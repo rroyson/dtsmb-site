@@ -13,8 +13,6 @@ const getOptions = (method = 'GET', body = null) => {
 }
 
 export const createEmail = history => (dispatch, getState) => {
-  console.log('history', history)
-  // console.log('getstate', getState().form)
   fetch(apiUrl + `contact`, getOptions('POST', getState().form))
     .then(res => res.json())
     .then(data =>

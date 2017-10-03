@@ -9,7 +9,7 @@ import { TextField, Button } from 't63'
 import { connect } from 'react-redux'
 import {
   SET_FORM_NAME,
-  SET_FORM_ADDRESS,
+  SET_FORM_PHONE,
   SET_FORM_EMAIL,
   SET_FORM_VENUE_NAME,
   SET_FORM_VENUE_LOCATION,
@@ -62,9 +62,9 @@ class Form extends React.Component {
                       onChange={props.handleName}
                     />
                     <TextField
-                      name="Address"
-                      value={props.form.address}
-                      onChange={props.handleAddress}
+                      name="Phone Number"
+                      value={props.form.phone}
+                      onChange={props.handlePhone}
                     />
                     <TextField
                       name="E-mail"
@@ -86,6 +86,7 @@ class Form extends React.Component {
                       <DatePicker
                         selected={props.form.date}
                         onChange={props.handleDateChange}
+                        title="Date"
                       />
                     </div>
                     <textarea
@@ -128,13 +129,12 @@ const connector = connect(mapStateToProps, mapActionsToProps)
 function mapActionsToProps(dispatch) {
   return {
     submitEmail: history => e => {
-      // console.log('history', history)
       e.preventDefault()
       dispatch(createEmail(history))
     },
     handleName: e => dispatch({ type: SET_FORM_NAME, payload: e.target.value }),
-    handleAddress: e =>
-      dispatch({ type: SET_FORM_ADDRESS, payload: e.target.value }),
+    handlePhone: e =>
+      dispatch({ type: SET_FORM_PHONE, payload: e.target.value }),
     handleEmail: e =>
       dispatch({ type: SET_FORM_EMAIL, payload: e.target.value }),
     handleVenueName: e =>
@@ -149,7 +149,6 @@ function mapActionsToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state.form.date._d)
   return {
     form: state.form
   }

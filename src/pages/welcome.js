@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Footer from '../containers/footer'
 
 const Welcome = function() {
@@ -16,16 +15,16 @@ const Welcome = function() {
                 'url("https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/10644981_1529062614008312_4558642661077359055_n.jpg?oh=8ff6acd9e247ae2bc7dfcf6e0fcf4e8f&oe=5A574D53")'
             }}
           >
-          <header className='tr pa4'>
-          <a
-            className=" hover-white-70 no-underline white f4 fw3 pv2 ph3 ba"
-            href="/home"
-          >
-            Enter
-          </a>
-          </header>
+            <header className="tr pa4">
+              <a
+                className=" hover-white-70 no-underline white f4 fw3 pv2 ph3 ba"
+                href="/home"
+              >
+                Enter
+              </a>
+            </header>
 
-          { /* <div className="flex fr w-100 vh-25 dib">
+            {/* <div className="flex fr w-100 vh-25 dib">
               <nav className="dt w-100 mw8 ">
                 <div className="dtc w2 v-mid pa3">
                   <a
@@ -89,17 +88,19 @@ const Welcome = function() {
                 The Charleston Wedding Band
               </h1>
             </div>
-            <div className='flex justify-center pb4'>
-            <iframe className="vh-50 w-60 ba white-50" 
-  src="https://www.youtube.com/embed/Ci3i-XwBwAs">
-  </iframe>
-  </div>
-  <Footer />
+            <div className="flex justify-center pb4">
+              <iframe
+                title=""
+                className="vh-50 w-60 ba white-50"
+                src="https://www.youtube.com/embed/Ci3i-XwBwAs"
+              />
+            </div>
+            <Footer />
 
           </div>
         </div>
       </main>
-      
+
     </div>
   )
 }

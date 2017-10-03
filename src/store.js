@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 import { merge } from 'ramda'
 import {
   SET_FORM_NAME,
-  SET_FORM_ADDRESS,
+  SET_FORM_PHONE,
   SET_FORM_EMAIL,
   SET_FORM_VENUE_NAME,
   SET_FORM_VENUE_LOCATION,
@@ -34,15 +34,18 @@ function app(state = { title: 'The Charleston Wedding Band' }, action) {
   }
 }
 
+//default date
+//date: moment()
+
 function form(
   state = {
     name: '',
-    address: '',
+    phone: '',
     email: '',
     venueName: '',
     venueLocation: '',
     comments: '',
-    date: moment(),
+    date: '',
     dateChange: ''
   },
   action
@@ -50,8 +53,8 @@ function form(
   switch (action.type) {
     case SET_FORM_NAME:
       return merge(state, { name: action.payload })
-    case SET_FORM_ADDRESS:
-      return merge(state, { address: action.payload })
+    case SET_FORM_PHONE:
+      return merge(state, { phone: action.payload })
     case SET_FORM_EMAIL:
       return merge(state, { email: action.payload })
     case SET_FORM_VENUE_NAME:
@@ -67,12 +70,12 @@ function form(
     case CLEAR_FORM:
       return (state = {
         name: '',
-        address: '',
+        phone: '',
         email: '',
         venueName: '',
         venueLocation: '',
         comments: '',
-        date: moment(),
+        date: '',
         dateChange: ''
       })
     default:

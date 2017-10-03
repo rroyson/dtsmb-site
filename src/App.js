@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import history from './history'
 import Welcome from './pages/welcome'
 import Home from './pages/home'
 import About from './pages/about'
@@ -9,7 +8,7 @@ import Form from './pages/contact-form'
 
 const App = function(props) {
   return (
-    <BrowserRouter history={history}>
+    <BrowserRouter>
       <div>
         <Switch>
           <Route exact path="/" component={Welcome} />
