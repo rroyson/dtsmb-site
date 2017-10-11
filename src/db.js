@@ -27,5 +27,5 @@ export const createEmail = history => (dispatch, getState) => {
       })
     )
     .then(() => history.push(`/contact`))
-  //.catch(err => console.log(err))
+    .catch(err => console.log(err))
 }
